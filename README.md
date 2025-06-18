@@ -7,151 +7,134 @@ or use 📊 to denote Tableau visuals.)
 2. Short Description / Purpose
 The IPL Insights Dashboard is a visually engaging and analytical Tableau report designed to help cricket analysts, commentators, team strategists, and enthusiastic fans dive into IPL match data across all seasons. It surfaces key metrics like title winners 🏆, Orange Cap (highest run-scorer) 🎖️, Purple Cap (highest wicket-taker) 🎗️, overall sixes/fours tally 💥, and the influence of toss decisions on match outcomes.
 
-3. Tech Stack
-📊 Tableau Desktop / Tableau Public – Main visualization platform used to build and publish the dashboard.
+3. Tech Stack 📊🛠️
+Tableau Desktop / Public 📈
 
-🛠️ Data Preparation Tools – Data cleaning/transformation in Excel and/or Python (Pandas) to shape match- and player-level datasets into Tableau-ready extracts.
+Core platform for building and publishing interactive visuals.
 
-🔢 Calculated Fields & Parameters in Tableau – For dynamic KPIs (e.g., season selector, computed totals, win percentages).
+Data Preparation 🧹
 
-📁 Data Source Files – CSV/Excel extracts (e.g., Kaggle IPL dataset containing matches, players, ball-by-ball details).
+Excel or Python (Pandas) for cleaning, normalizing team/player names, aggregating stats.
 
-☁️ Hosting – Published to Tableau Public for sharing; can embed in blogs or GitHub README with Tableau embed code or snapshot images.
+Tableau Calculations & Parameters 🔢
 
-(Tip: next to “Tableau” mentions, you can include a small Tableau icon or use an emoji like 📊 or 📈 for visual cues in documentation.)
+Dynamic fields (season selector, win% calculations, KPI metrics).
 
-4. Data Source
-Primary Source: IPL historical data (commonly from a public repository such as Kaggle’s IPL datasets).
+Data Files 📁
 
-Data Structure:
+CSV/Excel extracts (e.g., matches table, player-season aggregates, ball-by-ball if available).
 
-Matches Table 📝: season, match ID, teams, venue, toss winner/decision, match winner, margin, etc.
+Hosting & Sharing ☁️
 
-Players/Performance Table 📋: aggregated stats per season (runs scored by player, wickets taken).
+Published on Tableau Public; embedded in README or presentations via snapshot images or embed code.
 
-Ball-by-Ball Data (optional) 🎯: to compute total sixes/fours per season or per team.
+4. Data Source 📂
+Primary IPL Dataset
 
-Supplementary Tables 🏷️: team metadata (names, logos), season metadata (year, final match info).
+Matches table: season, match ID, teams, toss winner/decision, match winner, margin, venue, etc.
 
-Data Preparation:
+Player-season aggregates: total runs by player, total wickets by player.
 
-Clean inconsistent team naming over seasons (e.g., “Delhi Daredevils” → “Delhi Capitals”).
+Optional Ball-by-Ball Data 🎯
 
-Aggregate player stats per season for Orange Cap & Purple Cap winners.
+Used to compute total sixes/fours per season or by team.
 
-Summarize match outcomes by toss decision and by team.
+Supplementary Metadata 🏷️
 
-Compute counts of sixes and fours across matches/seasons (💥 & ▉ visuals).
+Team logos/names (normalize across seasons), season info (year, final match).
 
-(You can include small icons or inline images of team logos when presenting in HTML or rich Markdown for documentation.)
+Preparation Steps
 
-5. Features / Highlights
-• Business Problem 🎯
-IPL generates massive match and player data annually, but extracting quick insights is challenging:
+Clean & Normalize: harmonize team names (e.g., “Delhi Daredevils” → “Delhi Capitals”).
 
-Which teams have been most successful overall or in specific seasons? 🏆
+Aggregate Stats: compute Orange Cap (highest run-scorer) and Purple Cap (highest wicket-taker) per season.
 
-Who are the top run-scorers (Orange Cap) and wicket-takers (Purple Cap) by season? 🎖️🎗️
+Summarize Wins: tally match wins by team, split by batting-first vs. fielding-first.
 
-How many sixes and fours have been hit league-wide, and how has hitting power evolved? 💥
+Compute Totals: total sixes and fours per season (or overall if “All” selected).
 
-Does winning the toss and choosing to bat/field correlate strongly with match wins? 🎲
+5. Features / Highlights ✨
+🎯 Business Problem
+IPL data is rich but manual analysis is slow:
 
-How do teams fare in wins when batting first vs. chasing? 🚀 vs. 🛡️
+Which teams dominated in a given season or overall?
 
-• Goal of the Dashboard 🎯
-To deliver an interactive visual tool that:
+Who led in runs/wickets each year?
 
-Enables filtering by season (or view all seasons) and instantly see key outcomes. 🔄
+How have sixes/fours trends evolved?
 
-Highlights season-by-season champions and standout individual performances. 🌟
+Does toss decision (bat vs. field) influence win rates?
 
-Reveals scoring trends (total sixes/fours) across IPL history. 📈
+🎯 Goal
+Build an interactive Tableau dashboard for:
 
-Analyzes toss-decision-based win percentages and team-specific win distributions. ⚖️
+Filtering by season (or “All”) to surface key outcomes.
 
-Supports data-driven discussions for commentators, analysts, team management, and fans. 🧠
+Displaying season champion, Orange Cap, Purple Cap, sixes/fours totals.
 
-• Walkthrough of Key Visuals 📺
-Top KPI Tiles (Top Row) 📌
+Analyzing toss-decision impact on wins, and team-specific batting-first vs. field-first performance.
 
-Title Winner 🏆: Displays the IPL champion team for the selected season (or summary “Most successful team overall” when “All”). Shows team name + logo.
+📺 Key Visuals Walkthrough
+KPI Tiles (Top Row)
 
-Orange Cap 🎖️: Highest run-scorer of the season with total runs and player image/icon.
+🏆 Title Winner: Team name + logo for selected season (or summary “Most titles” when All).
 
-Purple Cap 🎗️: Highest wicket-taker of the season with total wickets and player icon.
+🎖️ Orange Cap: Player name + runs + image/icon.
 
-Tournament 6’s 💥: Total number of sixes hit in that season (or cumulatively).
+🎗️ Purple Cap: Player name + wickets + image/icon.
 
-Tournament 4’s ▉: Total number of fours hit in that season (or cumulatively).
+💥 Total Sixes: Count for season or overall.
 
-(Visual cue: place small cricket bat/ball icons next to these tiles in Tableau or documentation.)
+▉ Total Fours: Count for season or overall.
 
-Season Selector (Parameter / Filter) 🔄
+Season Selector 🔄
 
-Dropdown or slider allowing users to pick a specific season (2008, 2009, …) or “All”. All visuals update accordingly.
+Dropdown or slider (📅 icon) to pick season or “All”; updates all visuals.
 
-Use a season icon (📅) next to the control in documentation.
+Match Wins by Team & Toss Decision 📊
 
-Match Win by Team & Toss Decision (Stacked Bar Chart) 📊
+Horizontal stacked bars: each team on vertical axis.
 
-Horizontal stacked bars listing teams on vertical axis (e.g., Mumbai Indians, Chennai Super Kings).
+Color/legend: 🏏 batting-first wins vs. 🛡️ fielding-first wins.
 
-Bars split by matches won batting first (“bat” icon 🏏) vs. fielding first (“field” icon 🛡️).
+Hover tooltip shows exact counts; clicking filters other charts.
 
-Hover reveals exact counts; clicking filters other visuals.
+Toss Decision Win % 🥧
 
-In documentation, embed a small illustrative thumbnail or icon legend: 🏏 = batting-first wins, 🛡️ = field-first wins.
+Pie chart: % wins choosing to bat-first (🏏) vs. field-first (🛡️) for selected context.
 
-Toss Decision-Based Winning Percentage (Pie Chart) 🥧
+(Optional) Trends Over Seasons 📈
 
-Pie showing percentage of matches won when choosing to bat first vs. field first.
+Line chart of sixes/fours by season (with cricket-ball markers 🏏).
 
-Include legend icons: 🏏 for bat-first wins %, 🛡️ for field-first wins %.
+Toss-win % trend line to spot strategic shifts.
 
-In docs, show a small pie icon or embed the actual pie snapshot.
+(Optional) Top Performers Over Time 🥇
 
-(Optional) Trend Over Seasons (Line / Bar Charts) 📈
+Mini bar chart or table listing top 5 run-scorers or wicket-takers across seasons.
 
-Line chart showing total sixes or fours by season (use a cricket icon marker on points).
+Interactivity & Tooltips 💡
 
-Another line for toss-win % trend over years with markers (e.g., ⚖️ icons).
+Hover for extra context (e.g., average run rates).
 
-Documentation: include a small line-chart icon or embedded static thumbnail.
-
-(Optional) Top Performers Over Time (Table or Small Bar Chart) 🥇
-
-Table or mini bar chart ranking top 5 run-scorers or wicket-takers overall or per season.
-
-Use trophy 🏆 or medal 🎖️ emojis in column headers for visual flair.
-
-Tooltips & Interactivity 💡
-
-Hover tooltips: show extra context (e.g., season average run rates, team win percentages).
-
-Quick filters: e.g., click on a team icon to filter.
-
-In docs, note “Hover over bars to see detailed stats” with a cursor icon 🖱️.
+Click filters: drill into a single team or player across visuals.
 
 6. Screenshots / Demos 📷
-Below is a static snapshot of the dashboard; for full interactivity, visit the live Tableau Public link.
+Static Snapshot
+![IPL Dashboard Screenshot](sandbox:/mnt/data/IPL Analysis Dashboard.png)
+(Use small Tableau icon 📊 in corner of documentation or README.)
 
-![Dashboard Screenshot](sandbox:/mnt/data/IPL Analysis Dashboard.png)
-(Consider overlaying a small “Tableau” watermark or icon in the corner of screenshots for branding.)
+GitHub Reference
 
-Screenshot on GitHub:
-
-GitHub: IPL Analysis Dashboard Screenshot
-
-Raw image URL for embedding:
+Screenshot file in repo:
 https://raw.githubusercontent.com/mohsin2481/IPL-Analysis-Dashboard/main/IPL%20Analysis%20Dashboard.png
 
-You can also embed a small Tableau icon next to this link: 📊.
+Embed next to “View Dashboard” link.
 
-Interactive Version:
-Explore the IPL Insights Dashboard on Tableau Public 🔗
+Interactive Version
+Explore on Tableau Public 🔗 https://public.tableau.com/app/profile/mohsin.khan3774/viz/Book1_17159475855320/Dashboard1
 
-How to Use / Demo Walkthrough 🎬
+##How to Use / Demo Walkthrough 🎬
 Open the Dashboard: Click the link above to load it in Tableau Public.
 
 Select Season 📅: Use the season dropdown at the top-right to choose a specific IPL season or “All”.
