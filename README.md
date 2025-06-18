@@ -4,7 +4,7 @@ An interactive Tableau dashboard built to explore Indian Premier League (IPL) da
 (Includes a small Tableau logo icon next to the title when embedding in HTML/Markdown:
 or use 📊 to denote Tableau visuals.)
 
-2. Short Description / Purpose
+#2. Short Description / Purpose
 The IPL Insights Dashboard is a visually engaging and analytical Tableau report designed to help cricket analysts, commentators, team strategists, and enthusiastic fans dive into IPL match data across all seasons. It surfaces key metrics like title winners 🏆, Orange Cap (highest run-scorer) 🎖️, Purple Cap (highest wicket-taker) 🎗️, overall sixes/fours tally 💥, and the influence of toss decisions on match outcomes.
 
 3. Tech Stack 📊🛠️
