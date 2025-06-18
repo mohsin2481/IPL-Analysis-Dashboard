@@ -1,5 +1,5 @@
-1. # IPL-Analysis-Dashboard📊
-⚡🏏 IPL Insights Dashboard: Tableau Analysis of IPL Trends and Performances
+# IPL-Analysis-Dashboard📊
+1.⚡🏏 IPL Insights Dashboard: Tableau Analysis of IPL Trends and Performances
 An interactive Tableau dashboard built to explore Indian Premier League (IPL) data—highlighting team champions, top performers, scoring trends (sixes/fours), toss decision impacts, and head-to-head win patterns across seasons.
 (Includes a small Tableau logo icon next to the title when embedding in HTML/Markdown:
 or use 📊 to denote Tableau visuals.)
