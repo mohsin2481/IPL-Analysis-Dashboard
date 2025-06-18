@@ -4,30 +4,19 @@ An interactive Tableau dashboard built to explore Indian Premier League (IPL) da
 (Includes a small Tableau logo icon next to the title when embedding in HTML/Markdown:
 or use 📊 to denote Tableau visuals.)
 
-#2. Short Description / Purpose
+2. Short Description / Purpose
 The IPL Insights Dashboard is a visually engaging and analytical Tableau report designed to help cricket analysts, commentators, team strategists, and enthusiastic fans dive into IPL match data across all seasons. It surfaces key metrics like title winners 🏆, Orange Cap (highest run-scorer) 🎖️, Purple Cap (highest wicket-taker) 🎗️, overall sixes/fours tally 💥, and the influence of toss decisions on match outcomes.
 
 3. Tech Stack 📊🛠️
-Tableau Desktop / Public 📈
+📊 Tableau Desktop / Tableau Public – Main visualization platform used to build and publish the dashboard.
 
-Core platform for building and publishing interactive visuals.
+🛠️ Data Preparation Tools – Data cleaning/transformation in Excel and/or Python (Pandas) to shape match- and player-level datasets into Tableau-ready extracts.
 
-Data Preparation 🧹
+🔢 Calculated Fields & Parameters in Tableau – For dynamic KPIs (e.g., season selector, computed totals, win percentages).
 
-Excel or Python (Pandas) for cleaning, normalizing team/player names, aggregating stats.
+📁 Data Source Files – CSV/Excel extracts (e.g., Kaggle IPL dataset containing matches, players, ball-by-ball details).
 
-Tableau Calculations & Parameters 🔢
-
-Dynamic fields (season selector, win% calculations, KPI metrics).
-
-Data Files 📁
-
-CSV/Excel extracts (e.g., matches table, player-season aggregates, ball-by-ball if available).
-
-Hosting & Sharing ☁️
-
-Published on Tableau Public; embedded in README or presentations via snapshot images or embed code.
-
+☁️ Hosting – Published to Tableau Public for sharing; can embed in blogs or GitHub README with Tableau embed code or snapshot images.
 4. Data Source 📂
 Primary IPL Dataset
 
@@ -102,16 +91,6 @@ Hover tooltip shows exact counts; clicking filters other charts.
 Toss Decision Win % 🥧
 
 Pie chart: % wins choosing to bat-first (🏏) vs. field-first (🛡️) for selected context.
-
-(Optional) Trends Over Seasons 📈
-
-Line chart of sixes/fours by season (with cricket-ball markers 🏏).
-
-Toss-win % trend line to spot strategic shifts.
-
-(Optional) Top Performers Over Time 🥇
-
-Mini bar chart or table listing top 5 run-scorers or wicket-takers across seasons.
 
 Interactivity & Tooltips 💡
 
